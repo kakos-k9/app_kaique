@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "Hello World"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/kaique_teste"
+license = "BSD license"
+author = 'Kaique Afonso Ferreira do Rosário'
+author_email = "kaiqueafonsoferreira21@gmail.com"
+
+[tool.briefcase.app.kaique_teste]
+formal_name = "Hello World"
+description = "Olá! Este é uma aplicação feita por Kaique Afonso e ele está aprendendo a desenvolver com o BeeWare"
+icon = "src/kaique_teste/resources/kaique_teste"
+sources = ['src/kaique_teste']
+requires = []
+
+
+[tool.briefcase.app.kaique_teste.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.kaique_teste.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.kaique_teste.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.kaique_teste.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.kaique_teste.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
